@@ -1,5 +1,5 @@
 //
-//  YBSDImagePickerTool.h
+//  YBSImagePickerTool.h
 //  YBSImagePickerTool
 //
 //  Created by 严兵胜 on 2018/4/25.

@@ -19,6 +19,8 @@
 		16732AC420904D42006E04A8 /* YBSlertActionStyleSheet.m in Sources */ = {isa = PBXBuildFile; fileRef = 16732AC320904D42006E04A8 /* YBSlertActionStyleSheet.m */; };
 		16732AC92090588D006E04A8 /* UIView+Frame.m in Sources */ = {isa = PBXBuildFile; fileRef = 16732AC72090588C006E04A8 /* UIView+Frame.m */; };
 		168963DE20916CE100166603 /* YBSBobbleTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 168963D52091683100166603 /* YBSBobbleTool.m */; };
+		168963DF209177E300166603 /* YBSBubbleInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 168963DD2091683200166603 /* YBSBubbleInfo.m */; };
+		168963E0209177F700166603 /* YBSBubbleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 168963D62091683100166603 /* YBSBubbleView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -275,6 +277,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				168963E0209177F700166603 /* YBSBubbleView.m in Sources */,
+				168963DF209177E300166603 /* YBSBubbleInfo.m in Sources */,
 				168963DE20916CE100166603 /* YBSBobbleTool.m in Sources */,
 				16732AAA20901904006E04A8 /* ViewController.m in Sources */,
 				16732AC420904D42006E04A8 /* YBSlertActionStyleSheet.m in Sources */,

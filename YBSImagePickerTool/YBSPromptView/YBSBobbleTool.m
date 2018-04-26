@@ -176,7 +176,7 @@ static YBSBobbleTool *_instance;
 
 - (void)dealloc{
     
-    WSDLogClassDealloc
+    NSLog(@"%s_%@_控制器销毁了", __func__,[self class]);
 }
 
 

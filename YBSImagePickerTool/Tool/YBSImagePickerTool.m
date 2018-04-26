@@ -1,5 +1,5 @@
 //
-//  YBSDImagePickerTool.m
+//  YBSImagePickerTool.m
 //  YBSImagePickerTool
 //
 //  Created by 严兵胜 on 2018/4/25.
@@ -259,23 +259,21 @@ static CGFloat const ybs_cropRect_WH = 300; // 默认裁剪框的尺寸
                 [imagePickerTool failureWithErrorStr:@"压缩失败"];
                 return ;
             }
-//            [[TZImageManager manager] getCameraRollAlbum:NO allowPickingImage:YES completion:^(TZAlbumModel *model){
-//                [[TZImageManager manager] getAssetsFromFetchResult:model.result allowPickingVideo:NO allowPickingImage:YES completion:^(NSArray<TZAssetModel *> *models){
-//                    TZAssetModel *assetModel = [models firstObject];
-//                    if (imagePicVc.sortAscendingByModificationDate) assetModel = [models lastObject];
-//                    [YBSBobbleTool dismiss];
-//                    TZImagePickerController *imageCropPicker = [[TZImagePickerController alloc] initCropTypeWithAsset:assetModel.asset photo:image completion:^(UIImage *cropImage, id asset) {
-//                        [YBSBobbleTool dismiss];
-//                        [imagePickerTool addMoreImages:@[cropImage] sourceAssets:@[assetModel.asset]]; // 很重要必须写
-//                    }];
-//
-//                    imageCropPicker.cropRect = imagePickerTool.ybs_cropRect; // 裁剪尺寸
-//                    imageCropPicker.needCircleCrop = imagePickerTool.ybs_needCircleCrop;
-//                    imageCropPicker.circleCropRadius = imagePickerTool.ybs_circleCropRadius;
-//                    [[UIApplication sharedApplication].keyWindow.rootViewController presentViewController:imageCropPicker animated:YES completion:nil];
-//                }]; }];
-            
-        }];
+            [[TZImageManager manager] getCameraRollAlbum:NO allowPickingImage:YES needFetchAssets:YES completion:^(TZAlbumModel *model) {
+                [[TZImageManager manager] getAssetsFromFetchResult:model.result allowPickingVideo:NO allowPickingImage:YES completion:^(NSArray<TZAssetModel *> *models){
+                    TZAssetModel *assetModel = [models firstObject];
+                    if (imagePicVc.sortAscendingByModificationDate) assetModel = [models lastObject];
+                    [YBSBobbleTool dismiss];
+                    TZImagePickerController *imageCropPicker = [[TZImagePickerController alloc] initCropTypeWithAsset:assetModel.asset photo:image completion:^(UIImage *cropImage, id asset) {
+                        [YBSBobbleTool dismiss];
+                        [imagePickerTool addMoreImages:@[cropImage] sourceAssets:@[assetModel.asset]]; // 很重要必须写
+                    }];
+                    
+                    imageCropPicker.cropRect = imagePickerTool.ybs_cropRect; // 裁剪尺寸
+                    imageCropPicker.needCircleCrop = imagePickerTool.ybs_needCircleCrop;
+                    imageCropPicker.circleCropRadius = imagePickerTool.ybs_circleCropRadius;
+                    [[UIApplication sharedApplication].keyWindow.rootViewController presentViewController:imageCropPicker animated:YES completion:nil];
+                }]; }]; }];
     }
 }
 
@@ -361,7 +359,7 @@ static CGFloat const ybs_cropRect_WH = 300; // 默认裁剪框的尺寸
 
 
 #pragma mark - 额外api  相机权限
-+ (void)wsd_cameraPermissionResult:(void (^)(BOOL))resultBlock{
++ (void)ybs_cameraPermissionResult:(void (^)(BOOL))resultBlock{
     
     // 1、 获取摄像设备
     AVCaptureDevice *device = [AVCaptureDevice defaultDeviceWithMediaType:AVMediaTypeVideo];
@@ -375,8 +373,6 @@ static CGFloat const ybs_cropRect_WH = 300; // 默认裁剪框的尺寸
                     if (resultBlock) resultBlock(granted);
                 });
                 YBSLog(@"%@",granted? @"用户第一次同意了相机访问" : @"用户第一次拒绝了相机访问")
-                
-                
             }];
             
         } else if (status == AVAuthorizationStatusAuthorized) { // 用户允许当前应用访问相机
@@ -417,7 +413,7 @@ static CGFloat const ybs_cropRect_WH = 300; // 默认裁剪框的尺寸
     
 }
 
-+ (void)wsd_PhonePermissionResult:(void (^)(BOOL))resultBlock{
++ (void)ybs_PhonePermissionResult:(void (^)(BOOL))resultBlock{
     
     // 1、 获取摄像设备
     AVCaptureDevice *device = [AVCaptureDevice defaultDeviceWithMediaType:AVMediaTypeVideo];
@@ -509,6 +505,7 @@ static CGFloat const ybs_cropRect_WH = 300; // 默认裁剪框的尺寸
 
 
 - (void)dealloc{
+    
     YBSLogClassDealloc
 }
 
