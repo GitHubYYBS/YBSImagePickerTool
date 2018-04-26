@@ -7,12 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0735F3BE6B6F64FBAAB38B5B /* libPods-YBSImagePickerTool.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A4BA79E5DDB1937DA90DBCEF /* libPods-YBSImagePickerTool.a */; };
 		16732AA720901904006E04A8 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 16732AA620901904006E04A8 /* AppDelegate.m */; };
 		16732AAA20901904006E04A8 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 16732AA920901904006E04A8 /* ViewController.m */; };
 		16732AAD20901904006E04A8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 16732AAB20901904006E04A8 /* Main.storyboard */; };
 		16732AAF20901904006E04A8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 16732AAE20901904006E04A8 /* Assets.xcassets */; };
 		16732AB220901904006E04A8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 16732AB020901904006E04A8 /* LaunchScreen.storyboard */; };
 		16732AB520901904006E04A8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 16732AB420901904006E04A8 /* main.m */; };
+		16732ABE20902A37006E04A8 /* YBSImagePickerTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 16732ABD20902A37006E04A8 /* YBSImagePickerTool.m */; };
+		16732AC120904CD9006E04A8 /* UIViewController+TopViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 16732AC020904CD9006E04A8 /* UIViewController+TopViewController.m */; };
+		16732AC420904D42006E04A8 /* YBSlertActionStyleSheet.m in Sources */ = {isa = PBXBuildFile; fileRef = 16732AC320904D42006E04A8 /* YBSlertActionStyleSheet.m */; };
+		16732AC92090588D006E04A8 /* UIView+Frame.m in Sources */ = {isa = PBXBuildFile; fileRef = 16732AC72090588C006E04A8 /* UIView+Frame.m */; };
+		168963DE20916CE100166603 /* YBSBobbleTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 168963D52091683100166603 /* YBSBobbleTool.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +32,27 @@
 		16732AB120901904006E04A8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		16732AB320901904006E04A8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		16732AB420901904006E04A8 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		16732ABC20902A37006E04A8 /* YBSImagePickerTool.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YBSImagePickerTool.h; sourceTree = "<group>"; };
+		16732ABD20902A37006E04A8 /* YBSImagePickerTool.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YBSImagePickerTool.m; sourceTree = "<group>"; };
+		16732ABF20904CD9006E04A8 /* UIViewController+TopViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIViewController+TopViewController.h"; sourceTree = "<group>"; };
+		16732AC020904CD9006E04A8 /* UIViewController+TopViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+TopViewController.m"; sourceTree = "<group>"; };
+		16732AC220904D42006E04A8 /* YBSlertActionStyleSheet.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YBSlertActionStyleSheet.h; sourceTree = "<group>"; };
+		16732AC320904D42006E04A8 /* YBSlertActionStyleSheet.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YBSlertActionStyleSheet.m; sourceTree = "<group>"; };
+		16732AC620904EE0006E04A8 /* YBSHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YBSHeader.h; sourceTree = "<group>"; };
+		16732AC72090588C006E04A8 /* UIView+Frame.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+Frame.m"; sourceTree = "<group>"; };
+		16732AC82090588D006E04A8 /* UIView+Frame.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+Frame.h"; sourceTree = "<group>"; };
+		168963D52091683100166603 /* YBSBobbleTool.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YBSBobbleTool.m; sourceTree = "<group>"; };
+		168963D62091683100166603 /* YBSBubbleView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YBSBubbleView.m; sourceTree = "<group>"; };
+		168963D72091683200166603 /* UIResponder+YBSBubble.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIResponder+YBSBubble.m"; sourceTree = "<group>"; };
+		168963D82091683200166603 /* YBSBubble.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YBSBubble.h; sourceTree = "<group>"; };
+		168963D92091683200166603 /* UIResponder+YBSBubble.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIResponder+YBSBubble.h"; sourceTree = "<group>"; };
+		168963DA2091683200166603 /* YBSBubbleView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YBSBubbleView.h; sourceTree = "<group>"; };
+		168963DB2091683200166603 /* YBSBobbleTool.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YBSBobbleTool.h; sourceTree = "<group>"; };
+		168963DC2091683200166603 /* YBSBubbleInfo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YBSBubbleInfo.h; sourceTree = "<group>"; };
+		168963DD2091683200166603 /* YBSBubbleInfo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YBSBubbleInfo.m; sourceTree = "<group>"; };
+		937BD5430296A9F4E07D72B7 /* Pods-YBSImagePickerTool.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YBSImagePickerTool.release.xcconfig"; path = "Pods/Target Support Files/Pods-YBSImagePickerTool/Pods-YBSImagePickerTool.release.xcconfig"; sourceTree = "<group>"; };
+		A4BA79E5DDB1937DA90DBCEF /* libPods-YBSImagePickerTool.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-YBSImagePickerTool.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		BC1BBD12D874574F6B51889A /* Pods-YBSImagePickerTool.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YBSImagePickerTool.debug.xcconfig"; path = "Pods/Target Support Files/Pods-YBSImagePickerTool/Pods-YBSImagePickerTool.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,6 +60,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0735F3BE6B6F64FBAAB38B5B /* libPods-YBSImagePickerTool.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -44,6 +72,8 @@
 			children = (
 				16732AA420901904006E04A8 /* YBSImagePickerTool */,
 				16732AA320901904006E04A8 /* Products */,
+				6650F96F4E6983AAF3254A19 /* Pods */,
+				3AE73EB5A76C7A78407A002C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -58,6 +88,7 @@
 		16732AA420901904006E04A8 /* YBSImagePickerTool */ = {
 			isa = PBXGroup;
 			children = (
+				16732ABB20902A03006E04A8 /* Tool */,
 				16732AA520901904006E04A8 /* AppDelegate.h */,
 				16732AA620901904006E04A8 /* AppDelegate.m */,
 				16732AA820901904006E04A8 /* ViewController.h */,
@@ -67,8 +98,58 @@
 				16732AB020901904006E04A8 /* LaunchScreen.storyboard */,
 				16732AB320901904006E04A8 /* Info.plist */,
 				16732AB420901904006E04A8 /* main.m */,
+				16732AC82090588D006E04A8 /* UIView+Frame.h */,
+				16732AC72090588C006E04A8 /* UIView+Frame.m */,
+				168963D42091681D00166603 /* YBSPromptView */,
 			);
 			path = YBSImagePickerTool;
+			sourceTree = "<group>";
+		};
+		16732ABB20902A03006E04A8 /* Tool */ = {
+			isa = PBXGroup;
+			children = (
+				16732ABC20902A37006E04A8 /* YBSImagePickerTool.h */,
+				16732ABD20902A37006E04A8 /* YBSImagePickerTool.m */,
+				16732AC620904EE0006E04A8 /* YBSHeader.h */,
+				16732AC220904D42006E04A8 /* YBSlertActionStyleSheet.h */,
+				16732AC320904D42006E04A8 /* YBSlertActionStyleSheet.m */,
+				16732ABF20904CD9006E04A8 /* UIViewController+TopViewController.h */,
+				16732AC020904CD9006E04A8 /* UIViewController+TopViewController.m */,
+			);
+			path = Tool;
+			sourceTree = "<group>";
+		};
+		168963D42091681D00166603 /* YBSPromptView */ = {
+			isa = PBXGroup;
+			children = (
+				168963DB2091683200166603 /* YBSBobbleTool.h */,
+				168963D52091683100166603 /* YBSBobbleTool.m */,
+				168963D92091683200166603 /* UIResponder+YBSBubble.h */,
+				168963D72091683200166603 /* UIResponder+YBSBubble.m */,
+				168963D82091683200166603 /* YBSBubble.h */,
+				168963DC2091683200166603 /* YBSBubbleInfo.h */,
+				168963DD2091683200166603 /* YBSBubbleInfo.m */,
+				168963DA2091683200166603 /* YBSBubbleView.h */,
+				168963D62091683100166603 /* YBSBubbleView.m */,
+			);
+			path = YBSPromptView;
+			sourceTree = "<group>";
+		};
+		3AE73EB5A76C7A78407A002C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A4BA79E5DDB1937DA90DBCEF /* libPods-YBSImagePickerTool.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		6650F96F4E6983AAF3254A19 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				BC1BBD12D874574F6B51889A /* Pods-YBSImagePickerTool.debug.xcconfig */,
+				937BD5430296A9F4E07D72B7 /* Pods-YBSImagePickerTool.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -78,9 +159,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 16732AB820901904006E04A8 /* Build configuration list for PBXNativeTarget "YBSImagePickerTool" */;
 			buildPhases = (
+				C1ED98D21D424C1919588EF1 /* [CP] Check Pods Manifest.lock */,
 				16732A9E20901904006E04A8 /* Sources */,
 				16732A9F20901904006E04A8 /* Frameworks */,
 				16732AA020901904006E04A8 /* Resources */,
+				E2E7FD174839AA8C3FA100E0 /* [CP] Embed Pods Frameworks */,
+				D05EDBD01CAD19E5AEFF7DFC /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -97,6 +181,7 @@
 		16732A9A20901904006E04A8 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = YBS;
 				LastUpgradeCheck = 0900;
 				ORGANIZATIONNAME = "严兵胜";
 				TargetAttributes = {
@@ -137,12 +222,65 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		C1ED98D21D424C1919588EF1 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		D05EDBD01CAD19E5AEFF7DFC /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-YBSImagePickerTool/Pods-YBSImagePickerTool-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E2E7FD174839AA8C3FA100E0 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-YBSImagePickerTool/Pods-YBSImagePickerTool-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		16732A9E20901904006E04A8 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				168963DE20916CE100166603 /* YBSBobbleTool.m in Sources */,
 				16732AAA20901904006E04A8 /* ViewController.m in Sources */,
+				16732AC420904D42006E04A8 /* YBSlertActionStyleSheet.m in Sources */,
+				16732ABE20902A37006E04A8 /* YBSImagePickerTool.m in Sources */,
+				16732AC92090588D006E04A8 /* UIView+Frame.m in Sources */,
+				16732AC120904CD9006E04A8 /* UIViewController+TopViewController.m in Sources */,
 				16732AB520901904006E04A8 /* main.m in Sources */,
 				16732AA720901904006E04A8 /* AppDelegate.m in Sources */,
 			);
@@ -276,6 +414,7 @@
 		};
 		16732AB920901904006E04A8 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BC1BBD12D874574F6B51889A /* Pods-YBSImagePickerTool.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -291,6 +430,7 @@
 		};
 		16732ABA20901904006E04A8 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 937BD5430296A9F4E07D72B7 /* Pods-YBSImagePickerTool.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
