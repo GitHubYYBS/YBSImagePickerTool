@@ -52,6 +52,12 @@
 		168963DB2091683200166603 /* YBSBobbleTool.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YBSBobbleTool.h; sourceTree = "<group>"; };
 		168963DC2091683200166603 /* YBSBubbleInfo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YBSBubbleInfo.h; sourceTree = "<group>"; };
 		168963DD2091683200166603 /* YBSBubbleInfo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YBSBubbleInfo.m; sourceTree = "<group>"; };
+		168963E22091A5A800166603 /* UIImage+YBSResize.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIImage+YBSResize.h"; sourceTree = "<group>"; };
+		168963E32091A5A800166603 /* UIImage+YBSResize.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImage+YBSResize.m"; sourceTree = "<group>"; };
+		168963E42091A5A800166603 /* YBSCameraManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YBSCameraManager.h; sourceTree = "<group>"; };
+		168963E52091A5A900166603 /* UIButton+YBSBlock.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIButton+YBSBlock.m"; sourceTree = "<group>"; };
+		168963E62091A5A900166603 /* YBSCameraManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YBSCameraManager.m; sourceTree = "<group>"; };
+		168963E72091A5A900166603 /* UIButton+YBSBlock.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIButton+YBSBlock.h"; sourceTree = "<group>"; };
 		937BD5430296A9F4E07D72B7 /* Pods-YBSImagePickerTool.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YBSImagePickerTool.release.xcconfig"; path = "Pods/Target Support Files/Pods-YBSImagePickerTool/Pods-YBSImagePickerTool.release.xcconfig"; sourceTree = "<group>"; };
 		A4BA79E5DDB1937DA90DBCEF /* libPods-YBSImagePickerTool.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-YBSImagePickerTool.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BC1BBD12D874574F6B51889A /* Pods-YBSImagePickerTool.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YBSImagePickerTool.debug.xcconfig"; path = "Pods/Target Support Files/Pods-YBSImagePickerTool/Pods-YBSImagePickerTool.debug.xcconfig"; sourceTree = "<group>"; };
@@ -110,6 +116,7 @@
 		16732ABB20902A03006E04A8 /* Tool */ = {
 			isa = PBXGroup;
 			children = (
+				168963E12091A59100166603 /* YBSCameraManager */,
 				16732ABC20902A37006E04A8 /* YBSImagePickerTool.h */,
 				16732ABD20902A37006E04A8 /* YBSImagePickerTool.m */,
 				16732AC620904EE0006E04A8 /* YBSHeader.h */,
@@ -135,6 +142,19 @@
 				168963D62091683100166603 /* YBSBubbleView.m */,
 			);
 			path = YBSPromptView;
+			sourceTree = "<group>";
+		};
+		168963E12091A59100166603 /* YBSCameraManager */ = {
+			isa = PBXGroup;
+			children = (
+				168963E72091A5A900166603 /* UIButton+YBSBlock.h */,
+				168963E52091A5A900166603 /* UIButton+YBSBlock.m */,
+				168963E22091A5A800166603 /* UIImage+YBSResize.h */,
+				168963E32091A5A800166603 /* UIImage+YBSResize.m */,
+				168963E42091A5A800166603 /* YBSCameraManager.h */,
+				168963E62091A5A900166603 /* YBSCameraManager.m */,
+			);
+			path = YBSCameraManager;
 			sourceTree = "<group>";
 		};
 		3AE73EB5A76C7A78407A002C /* Frameworks */ = {
