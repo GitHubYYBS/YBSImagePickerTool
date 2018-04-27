@@ -37,7 +37,10 @@
 
 - (void)clickBtn{
     
-    [YBSImagePickerTool ybs_ImagePickerToolWithMaxImagesCount:2 didFinishPickingPhotos:^(NSArray *imagesArray) {
+    YBSImagePickerTool *tool = [YBSImagePickerTool new];
+    tool.ybs_fullScreenTakePickerBool =true;
+    
+    [tool ybs_ImagePickerToolWithMaxImagesCount:2 didFinishPickingPhotos:^(NSArray *imagesArray) {
         self.imageView.image = imagesArray[0];
     } failure:^(NSString *errorStr) {
         

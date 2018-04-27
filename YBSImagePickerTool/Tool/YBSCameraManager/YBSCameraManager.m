@@ -27,7 +27,7 @@
 @implementation YBSCameraManager
 - (void)dealloc
 {
-    FSXLog(@"照相机管理人释放了");
+    NSLog(@"照相机管理人释放了");
     if ([self.session isRunning]) {
         [self.session stopRunning];
         self.session = nil;

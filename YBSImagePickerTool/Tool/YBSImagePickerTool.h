@@ -35,7 +35,8 @@
 @property (nonatomic, assign) BOOL ybs_needCircleCrop;
 /// 圆形裁剪框半径大小
 @property (nonatomic, assign) NSInteger ybs_circleCropRadius;
-
+/// 是否需要全屏拍照
+@property (nonatomic, assign) BOOL ybs_fullScreenTakePickerBool;
 
 
 /**

@@ -16,6 +16,8 @@
 #import "TZImagePickerController.h"
 #import "TZImageManager.h"
 
+#import "YBSCameraManagerTool.h"
+
 
 typedef NS_ENUM(NSInteger,YBSAuthorizationCameraOrPhotoType){
     /// @brief 相机
@@ -282,7 +284,13 @@ static CGFloat const ybs_cropRect_WH = 300; // 默认裁剪框的尺寸
 
 - (void)takePhoto{
     
-    if ([self isCanOpenCamera]) [[UIApplication sharedApplication].keyWindow.rootViewController.ybs_topViewController presentViewController:self.imagePickerVc animated:YES completion:nil];
+    if (![self isCanOpenCamera]) return;
+    
+    if (self.ybs_fullScreenTakePickerBool){ // 需要全屏拍照
+         [[UIApplication sharedApplication].keyWindow.rootViewController.ybs_topViewController presentViewController:[YBSCameraManagerTool new] animated:YES completion:nil];
+    }else{
+        [[UIApplication sharedApplication].keyWindow.rootViewController.ybs_topViewController presentViewController:self.imagePickerVc animated:YES completion:nil];
+    }
 }
 
 
