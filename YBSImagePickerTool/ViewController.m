@@ -10,6 +10,14 @@
 
 #import "YBSImagePickerTool.h"
 
+
+/**  尺寸 */
+#define YBSSCREEN_WIDTH ([UIScreen mainScreen].bounds.size.width)
+#define YBSSCREEN_HEIGHT ([UIScreen mainScreen].bounds.size.height)
+
+// 宽度适配
+#define LQScalingStyle(Value) (Value*YBSSCREEN_WIDTH/750)
+
 @interface ViewController ()
 
 @property (nonatomic, weak) UIImageView *imageView;
@@ -22,8 +30,10 @@
     [super viewDidLoad];
     
     
-    UIImageView *imageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 300, 300)];
+    UIImageView *imageView = [[UIImageView alloc] initWithFrame:CGRectMake(LQScalingStyle(48), LQScalingStyle(334), LQScalingStyle(654), LQScalingStyle(410))];
     imageView.center = self.view.center;
+    imageView.contentMode = UIViewContentModeScaleAspectFit;
+    imageView.backgroundColor = [UIColor yellowColor];
     [self.view addSubview:_imageView = imageView];
     
     UIButton *btn = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 50, 50)];

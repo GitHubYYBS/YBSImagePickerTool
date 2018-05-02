@@ -21,10 +21,6 @@
 		168963DE20916CE100166603 /* YBSBobbleTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 168963D52091683100166603 /* YBSBobbleTool.m */; };
 		168963DF209177E300166603 /* YBSBubbleInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 168963DD2091683200166603 /* YBSBubbleInfo.m */; };
 		168963E0209177F700166603 /* YBSBubbleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 168963D62091683100166603 /* YBSBubbleView.m */; };
-		168963EA2091A6E400166603 /* YBSCameraManagerTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 168963E92091A6E400166603 /* YBSCameraManagerTool.m */; };
-		168963F02091B72200166603 /* UIView+YBSFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = 168963EF2091B72200166603 /* UIView+YBSFrame.m */; };
-		168963F12091CC2D00166603 /* YBSCameraManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 168963E62091A5A900166603 /* YBSCameraManager.m */; };
-		168963F22091CD6F00166603 /* UIImage+YBSResize.m in Sources */ = {isa = PBXBuildFile; fileRef = 168963E32091A5A800166603 /* UIImage+YBSResize.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -56,16 +52,6 @@
 		168963DB2091683200166603 /* YBSBobbleTool.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YBSBobbleTool.h; sourceTree = "<group>"; };
 		168963DC2091683200166603 /* YBSBubbleInfo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YBSBubbleInfo.h; sourceTree = "<group>"; };
 		168963DD2091683200166603 /* YBSBubbleInfo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YBSBubbleInfo.m; sourceTree = "<group>"; };
-		168963E22091A5A800166603 /* UIImage+YBSResize.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIImage+YBSResize.h"; sourceTree = "<group>"; };
-		168963E32091A5A800166603 /* UIImage+YBSResize.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImage+YBSResize.m"; sourceTree = "<group>"; };
-		168963E42091A5A800166603 /* YBSCameraManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YBSCameraManager.h; sourceTree = "<group>"; };
-		168963E52091A5A900166603 /* UIButton+YBSBlock.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIButton+YBSBlock.m"; sourceTree = "<group>"; };
-		168963E62091A5A900166603 /* YBSCameraManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YBSCameraManager.m; sourceTree = "<group>"; };
-		168963E72091A5A900166603 /* UIButton+YBSBlock.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIButton+YBSBlock.h"; sourceTree = "<group>"; };
-		168963E82091A6E400166603 /* YBSCameraManagerTool.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YBSCameraManagerTool.h; sourceTree = "<group>"; };
-		168963E92091A6E400166603 /* YBSCameraManagerTool.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YBSCameraManagerTool.m; sourceTree = "<group>"; };
-		168963EE2091B72200166603 /* UIView+YBSFrame.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+YBSFrame.h"; sourceTree = "<group>"; };
-		168963EF2091B72200166603 /* UIView+YBSFrame.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+YBSFrame.m"; sourceTree = "<group>"; };
 		937BD5430296A9F4E07D72B7 /* Pods-YBSImagePickerTool.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YBSImagePickerTool.release.xcconfig"; path = "Pods/Target Support Files/Pods-YBSImagePickerTool/Pods-YBSImagePickerTool.release.xcconfig"; sourceTree = "<group>"; };
 		A4BA79E5DDB1937DA90DBCEF /* libPods-YBSImagePickerTool.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-YBSImagePickerTool.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BC1BBD12D874574F6B51889A /* Pods-YBSImagePickerTool.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YBSImagePickerTool.debug.xcconfig"; path = "Pods/Target Support Files/Pods-YBSImagePickerTool/Pods-YBSImagePickerTool.debug.xcconfig"; sourceTree = "<group>"; };
@@ -124,7 +110,6 @@
 		16732ABB20902A03006E04A8 /* Tool */ = {
 			isa = PBXGroup;
 			children = (
-				168963E12091A59100166603 /* YBSCameraManager */,
 				16732ABC20902A37006E04A8 /* YBSImagePickerTool.h */,
 				16732ABD20902A37006E04A8 /* YBSImagePickerTool.m */,
 				16732AC620904EE0006E04A8 /* YBSHeader.h */,
@@ -150,23 +135,6 @@
 				168963D62091683100166603 /* YBSBubbleView.m */,
 			);
 			path = YBSPromptView;
-			sourceTree = "<group>";
-		};
-		168963E12091A59100166603 /* YBSCameraManager */ = {
-			isa = PBXGroup;
-			children = (
-				168963E82091A6E400166603 /* YBSCameraManagerTool.h */,
-				168963E92091A6E400166603 /* YBSCameraManagerTool.m */,
-				168963E72091A5A900166603 /* UIButton+YBSBlock.h */,
-				168963E52091A5A900166603 /* UIButton+YBSBlock.m */,
-				168963E22091A5A800166603 /* UIImage+YBSResize.h */,
-				168963E32091A5A800166603 /* UIImage+YBSResize.m */,
-				168963EE2091B72200166603 /* UIView+YBSFrame.h */,
-				168963EF2091B72200166603 /* UIView+YBSFrame.m */,
-				168963E42091A5A800166603 /* YBSCameraManager.h */,
-				168963E62091A5A900166603 /* YBSCameraManager.m */,
-			);
-			path = YBSCameraManager;
 			sourceTree = "<group>";
 		};
 		3AE73EB5A76C7A78407A002C /* Frameworks */ = {
@@ -309,19 +277,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				168963F22091CD6F00166603 /* UIImage+YBSResize.m in Sources */,
-				168963F12091CC2D00166603 /* YBSCameraManager.m in Sources */,
 				168963E0209177F700166603 /* YBSBubbleView.m in Sources */,
 				168963DF209177E300166603 /* YBSBubbleInfo.m in Sources */,
 				168963DE20916CE100166603 /* YBSBobbleTool.m in Sources */,
 				16732AAA20901904006E04A8 /* ViewController.m in Sources */,
 				16732AC420904D42006E04A8 /* YBSlertActionStyleSheet.m in Sources */,
-				168963F02091B72200166603 /* UIView+YBSFrame.m in Sources */,
 				16732ABE20902A37006E04A8 /* YBSImagePickerTool.m in Sources */,
 				16732AC92090588D006E04A8 /* UIView+Frame.m in Sources */,
 				16732AC120904CD9006E04A8 /* UIViewController+TopViewController.m in Sources */,
 				16732AB520901904006E04A8 /* main.m in Sources */,
-				168963EA2091A6E400166603 /* YBSCameraManagerTool.m in Sources */,
 				16732AA720901904006E04A8 /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
