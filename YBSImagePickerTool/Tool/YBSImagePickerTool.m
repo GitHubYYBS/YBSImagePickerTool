@@ -16,6 +16,9 @@
 #import "TZImagePickerController.h"
 #import "TZImageManager.h"
 
+#import "YBSFullScreeTakeImageTool.h"
+
+
 
 
 typedef NS_ENUM(NSInteger,YBSAuthorizationCameraOrPhotoType){
@@ -286,11 +289,10 @@ static CGFloat const ybs_cropRect_WH = 300; // 默认裁剪框的尺寸
     if (![self isCanOpenCamera]) return;
     
     if (self.ybs_fullScreenTakePickerBool){ // 需要全屏拍照
-//        YBSCameraManagerTool *vc = [YBSCameraManagerTool new];
-//        vc.takePictureSuccessBlock = ^(UIImage *image) {
-//            if (imagePickerTool.finishPickingPhotosBlock) imagePickerTool.finishPickingPhotosBlock(@[image]);
-//        };
-//         [[UIApplication sharedApplication].keyWindow.rootViewController.ybs_topViewController presentViewController:vc animated:YES completion:nil];
+        YBSFullScreeTakeImageTool *vc = [YBSFullScreeTakeImageTool new];
+        [vc ybs_fullScreeTakeImageToolidFinishPickingPhotos:^(UIImage *image) {
+            if (imagePickerTool.finishPickingPhotosBlock) imagePickerTool.finishPickingPhotosBlock(@[image]);
+        } failure:nil];
     }else{
         [[UIApplication sharedApplication].keyWindow.rootViewController.ybs_topViewController presentViewController:self.imagePickerVc animated:YES completion:nil];
     }
@@ -325,8 +327,8 @@ static CGFloat const ybs_cropRect_WH = 300; // 默认裁剪框的尺寸
                 if (granted) [self takePhoto];
             }];
         }else if (authStatus == AVAuthorizationStatusRestricted || authStatus == AVAuthorizationStatusDenied){ // 用户禁止使用,且授权状态不可修改,可能由于家长控制功能 // 用户已经禁止使用
-            
-            UIAlertController *alertC = [UIAlertController alertControllerWithTitle:@"无权访问相机" message:@"请为小哥出行打开相机访问权限\n[设置 - 隐私 - 相机]" preferredStyle:(UIAlertControllerStyleAlert)];
+            NSString *app_Name = [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleDisplayName"];
+            UIAlertController *alertC = [UIAlertController alertControllerWithTitle:@"无权访问相机" message:[NSString stringWithFormat:@"请为\"%@\"打开相机访问权限\n[设置 - 隐私 - 相机]",app_Name] preferredStyle:(UIAlertControllerStyleAlert)];
             UIAlertAction *alertA = [UIAlertAction actionWithTitle:@"前往设置" style:(UIAlertActionStyleDefault) handler:^(UIAlertAction * _Nonnull action) {
                 self.authorizationType = YBSAuthorizationCameraOrPhotoTypeForCamera;
                 [self ybs_GoSetting];
@@ -392,7 +394,9 @@ static CGFloat const ybs_cropRect_WH = 300; // 默认裁剪框的尺寸
             
             
         } else if (status == AVAuthorizationStatusDenied) { // 用户拒绝当前应用访问相机
-            UIAlertController *alertC = [UIAlertController alertControllerWithTitle:@"无权访问相机" message:@"请为小哥出行打开相机访问权限\n[设置 - 隐私 - 相机]" preferredStyle:(UIAlertControllerStyleAlert)];
+            
+            NSString *app_Name = [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleDisplayName"];
+            UIAlertController *alertC = [UIAlertController alertControllerWithTitle:@"无权访问相机" message:[NSString stringWithFormat:@"请为\"%@\"打开相机访问权限\n[设置 - 隐私 - 相机]",app_Name] preferredStyle:(UIAlertControllerStyleAlert)];
             UIAlertAction *alertA = [UIAlertAction actionWithTitle:@"确定" style:(UIAlertActionStyleDefault) handler:^(UIAlertAction * _Nonnull action) {
                 
             }];
@@ -467,7 +471,8 @@ static CGFloat const ybs_cropRect_WH = 300; // 默认裁剪框的尺寸
             
             if (resultBlock) resultBlock(false);
             
-            UIAlertController *alertC = [UIAlertController alertControllerWithTitle:@"无权访问相册" message:@"请为小哥出行打开相册权限\n[设置 - 隐私 - 照片]" preferredStyle:(UIAlertControllerStyleAlert)];
+            NSString *app_Name = [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleDisplayName"];
+            UIAlertController *alertC = [UIAlertController alertControllerWithTitle:@"无权访问相册" message:[NSString stringWithFormat:@"请为\"%@\"打开相册权限\n[设置 - 隐私 - 照片]",app_Name] preferredStyle:(UIAlertControllerStyleAlert)];
             UIAlertAction *alertA = [UIAlertAction actionWithTitle:@"确定" style:(UIAlertActionStyleDefault) handler:^(UIAlertAction * _Nonnull action) {
                 
             }];

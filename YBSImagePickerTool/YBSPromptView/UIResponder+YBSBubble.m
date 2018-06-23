@@ -143,7 +143,7 @@
     return info;
 }
 
-- (void)showRoundProgressWithTitle: (NSString *)title{
+- (void)showRoundProgressWithTitle:(NSString *)title{
     YBSBubbleInfo *info = [self getDefaultRoundProgressBubbleInfo];
     info.title = title;
     [[YBSBubbleView defaultBubbleView] showWithInfo: info];

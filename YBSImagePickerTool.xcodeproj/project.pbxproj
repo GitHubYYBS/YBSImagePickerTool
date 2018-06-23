@@ -21,6 +21,10 @@
 		168963DE20916CE100166603 /* YBSBobbleTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 168963D52091683100166603 /* YBSBobbleTool.m */; };
 		168963DF209177E300166603 /* YBSBubbleInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 168963DD2091683200166603 /* YBSBubbleInfo.m */; };
 		168963E0209177F700166603 /* YBSBubbleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 168963D62091683100166603 /* YBSBubbleView.m */; };
+		169959A82099AF4C0046B695 /* YBSFullScreeTakeImageTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 169959A72099AF4C0046B695 /* YBSFullScreeTakeImageTool.m */; };
+		16CCC7CD209AAE7D00F988AC /* YBSFullScreeTakeImageTool.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 16CCC7CC209AAE7D00F988AC /* YBSFullScreeTakeImageTool.bundle */; };
+		16CCC7D2209ADAF200F988AC /* UIViewController+Expand.m in Sources */ = {isa = PBXBuildFile; fileRef = 16CCC7D1209ADAF200F988AC /* UIViewController+Expand.m */; };
+		9773D17A20DCF66D00DD9F0F /* UIResponder+YBSBubble.m in Sources */ = {isa = PBXBuildFile; fileRef = 168963D72091683200166603 /* UIResponder+YBSBubble.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -52,6 +56,11 @@
 		168963DB2091683200166603 /* YBSBobbleTool.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YBSBobbleTool.h; sourceTree = "<group>"; };
 		168963DC2091683200166603 /* YBSBubbleInfo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YBSBubbleInfo.h; sourceTree = "<group>"; };
 		168963DD2091683200166603 /* YBSBubbleInfo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YBSBubbleInfo.m; sourceTree = "<group>"; };
+		169959A62099AF4C0046B695 /* YBSFullScreeTakeImageTool.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YBSFullScreeTakeImageTool.h; sourceTree = "<group>"; };
+		169959A72099AF4C0046B695 /* YBSFullScreeTakeImageTool.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YBSFullScreeTakeImageTool.m; sourceTree = "<group>"; };
+		16CCC7CC209AAE7D00F988AC /* YBSFullScreeTakeImageTool.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = YBSFullScreeTakeImageTool.bundle; sourceTree = "<group>"; };
+		16CCC7D0209ADAF200F988AC /* UIViewController+Expand.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIViewController+Expand.h"; sourceTree = "<group>"; };
+		16CCC7D1209ADAF200F988AC /* UIViewController+Expand.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+Expand.m"; sourceTree = "<group>"; };
 		937BD5430296A9F4E07D72B7 /* Pods-YBSImagePickerTool.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YBSImagePickerTool.release.xcconfig"; path = "Pods/Target Support Files/Pods-YBSImagePickerTool/Pods-YBSImagePickerTool.release.xcconfig"; sourceTree = "<group>"; };
 		A4BA79E5DDB1937DA90DBCEF /* libPods-YBSImagePickerTool.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-YBSImagePickerTool.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BC1BBD12D874574F6B51889A /* Pods-YBSImagePickerTool.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YBSImagePickerTool.debug.xcconfig"; path = "Pods/Target Support Files/Pods-YBSImagePickerTool/Pods-YBSImagePickerTool.debug.xcconfig"; sourceTree = "<group>"; };
@@ -90,6 +99,7 @@
 		16732AA420901904006E04A8 /* YBSImagePickerTool */ = {
 			isa = PBXGroup;
 			children = (
+				169959A52099AF020046B695 /* YBSFullScreeTakeImageTool */,
 				16732ABB20902A03006E04A8 /* Tool */,
 				16732AA520901904006E04A8 /* AppDelegate.h */,
 				16732AA620901904006E04A8 /* AppDelegate.m */,
@@ -135,6 +145,18 @@
 				168963D62091683100166603 /* YBSBubbleView.m */,
 			);
 			path = YBSPromptView;
+			sourceTree = "<group>";
+		};
+		169959A52099AF020046B695 /* YBSFullScreeTakeImageTool */ = {
+			isa = PBXGroup;
+			children = (
+				16CCC7CC209AAE7D00F988AC /* YBSFullScreeTakeImageTool.bundle */,
+				169959A62099AF4C0046B695 /* YBSFullScreeTakeImageTool.h */,
+				169959A72099AF4C0046B695 /* YBSFullScreeTakeImageTool.m */,
+				16CCC7D0209ADAF200F988AC /* UIViewController+Expand.h */,
+				16CCC7D1209ADAF200F988AC /* UIViewController+Expand.m */,
+			);
+			path = YBSFullScreeTakeImageTool;
 			sourceTree = "<group>";
 		};
 		3AE73EB5A76C7A78407A002C /* Frameworks */ = {
@@ -189,7 +211,7 @@
 				TargetAttributes = {
 					16732AA120901904006E04A8 = {
 						CreatedOnToolsVersion = 9.0;
-						ProvisioningStyle = Automatic;
+						ProvisioningStyle = Manual;
 					};
 				};
 			};
@@ -218,6 +240,7 @@
 			files = (
 				16732AB220901904006E04A8 /* LaunchScreen.storyboard in Resources */,
 				16732AAF20901904006E04A8 /* Assets.xcassets in Resources */,
+				16CCC7CD209AAE7D00F988AC /* YBSFullScreeTakeImageTool.bundle in Resources */,
 				16732AAD20901904006E04A8 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -277,13 +300,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9773D17A20DCF66D00DD9F0F /* UIResponder+YBSBubble.m in Sources */,
 				168963E0209177F700166603 /* YBSBubbleView.m in Sources */,
 				168963DF209177E300166603 /* YBSBubbleInfo.m in Sources */,
 				168963DE20916CE100166603 /* YBSBobbleTool.m in Sources */,
 				16732AAA20901904006E04A8 /* ViewController.m in Sources */,
+				169959A82099AF4C0046B695 /* YBSFullScreeTakeImageTool.m in Sources */,
 				16732AC420904D42006E04A8 /* YBSlertActionStyleSheet.m in Sources */,
 				16732ABE20902A37006E04A8 /* YBSImagePickerTool.m in Sources */,
 				16732AC92090588D006E04A8 /* UIView+Frame.m in Sources */,
+				16CCC7D2209ADAF200F988AC /* UIViewController+Expand.m in Sources */,
 				16732AC120904CD9006E04A8 /* UIViewController+TopViewController.m in Sources */,
 				16732AB520901904006E04A8 /* main.m in Sources */,
 				16732AA720901904006E04A8 /* AppDelegate.m in Sources */,
@@ -421,8 +447,8 @@
 			baseConfigurationReference = BC1BBD12D874574F6B51889A /* Pods-YBSImagePickerTool.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = EQ89HLJ9Y5;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = 5PL7BMR5SN;
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"${PODS_ROOT}/Headers/Public\"",
@@ -434,6 +460,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = ybs.YBSImagePickerTool;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "0d2789a2-c810-4cd1-80df-8cd1c65d5485";
+				PROVISIONING_PROFILE_SPECIFIER = "czq's mac_development_profile";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -443,8 +471,8 @@
 			baseConfigurationReference = 937BD5430296A9F4E07D72B7 /* Pods-YBSImagePickerTool.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = EQ89HLJ9Y5;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = 5PL7BMR5SN;
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"${PODS_ROOT}/Headers/Public\"",
@@ -456,6 +484,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = ybs.YBSImagePickerTool;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "0d2789a2-c810-4cd1-80df-8cd1c65d5485";
+				PROVISIONING_PROFILE_SPECIFIER = "czq's mac_development_profile";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;

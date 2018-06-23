@@ -24,7 +24,7 @@
  @param title         要提示的标题
  @param autoCloseTime 自动关闭的时间
  */
-- (void)showSuccessWithTitle: (NSString *)title autoCloseTime: (CGFloat)autoCloseTime;
+- (void)showSuccessWithTitle:(NSString *)title autoCloseTime:(CGFloat)autoCloseTime;
 
 /**
  获取默认的显示加载中的泡泡信息对象，可以在此基础之上自定义
@@ -38,7 +38,7 @@
 
  @param title 要提示的标题
  */
-- (void)showRoundProgressWithTitle: (NSString *)title;
+- (void)showRoundProgressWithTitle:(NSString *)title;
 
 /**
  获取默认的显示错误的泡泡信息对象，可以在此基础之上自定义
