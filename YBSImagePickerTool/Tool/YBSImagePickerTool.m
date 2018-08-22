@@ -499,22 +499,32 @@ static CGFloat const ybs_cropRect_WH = 300; // 默认裁剪框的尺寸
 
 - (void)ybs_GoSetting{
     
-    if ((([[[UIDevice currentDevice] systemVersion] floatValue] >= 8.0) ? YES : NO)) {
+    
+    if ([[UIApplication sharedApplication] canOpenURL:[NSURL URLWithString:UIApplicationOpenSettingsURLString]]) {
         [[UIApplication sharedApplication] openURL:[NSURL URLWithString:UIApplicationOpenSettingsURLString]];
     }else{
-        NSURL *privacyUrl;
-        if (self.authorizationType == YBSAuthorizationCameraOrPhotoTypeForPhoto) {
-            privacyUrl = [NSURL URLWithString:@"prefs:root=Privacy&path=PHOTOS"];
-        } else {
-            privacyUrl = [NSURL URLWithString:@"prefs:root=Privacy&path=CAMERA"];
-        }
-        if ([[UIApplication sharedApplication] canOpenURL:privacyUrl]) {
-            [[UIApplication sharedApplication] openURL:privacyUrl];
-        } else {
-            UIAlertView * alert = [[UIAlertView alloc]initWithTitle:@"抱歉" message:@"无法跳转到隐私设置页面，请打开设置手动前往" delegate:nil cancelButtonTitle:@"确定" otherButtonTitles: nil];
-            [alert show];
-        }
+        UIAlertView * alert = [[UIAlertView alloc]initWithTitle:@"抱歉" message:@"无法跳转到隐私设置页面，请打开设置手动前往" delegate:nil cancelButtonTitle:@"确定" otherButtonTitles: nil];
+        [alert show];
     }
+    
+    /// 访问了私有变量 会被和谐掉
+    
+//    if ((([[[UIDevice currentDevice] systemVersion] floatValue] >= 8.0) ? YES : NO)) {
+//        [[UIApplication sharedApplication] openURL:[NSURL URLWithString:UIApplicationOpenSettingsURLString]];
+//    }else{
+//        NSURL *privacyUrl;
+//        if (self.authorizationType == YBSAuthorizationCameraOrPhotoTypeForPhoto) {
+//            privacyUrl = [NSURL URLWithString:@"prefs:root=Privacy&path=PHOTOS"];
+//        } else {
+//            privacyUrl = [NSURL URLWithString:@"prefs:root=Privacy&path=CAMERA"];
+//        }
+//        if ([[UIApplication sharedApplication] canOpenURL:privacyUrl]) {
+//            [[UIApplication sharedApplication] openURL:privacyUrl];
+//        } else {
+//            UIAlertView * alert = [[UIAlertView alloc]initWithTitle:@"抱歉" message:@"无法跳转到隐私设置页面，请打开设置手动前往" delegate:nil cancelButtonTitle:@"确定" otherButtonTitles: nil];
+//            [alert show];
+//        }
+//    }
 }
 
 
